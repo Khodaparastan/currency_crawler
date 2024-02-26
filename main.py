@@ -91,9 +91,9 @@ def loopp():
     if html_content:
         param_value = extract_param_from_html(html_content)
         if param_value:
-        post_data_with_param(param_value)
+            post_data_with_param(param_value)
         else:
-        print("Failed to extract parameter from HTML content")
+            print("Failed to extract parameter from HTML content")
     else:
         print("Failed to retrieve HTML content")
         loopp()
