@@ -86,15 +86,17 @@ def post_data_with_param(param):
     
     else:
         print("Failed to send POST request")
-
-# Main execution flow
-html_content = get_html_content()
-if html_content:
-    param_value = extract_param_from_html(html_content)
-    if param_value:
+def loopp():
+    html_content = get_html_content()
+    if html_content:
+        param_value = extract_param_from_html(html_content)
+        if param_value:
         post_data_with_param(param_value)
-    else:
+        else:
         print("Failed to extract parameter from HTML content")
-else:
-    print("Failed to retrieve HTML content")
+    else:
+        print("Failed to retrieve HTML content")
+        loopp()
+# Main execution flow
 
+loopp()
