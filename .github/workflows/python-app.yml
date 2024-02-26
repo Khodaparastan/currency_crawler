@@ -36,6 +36,7 @@ jobs:
         git config --local user.email "mkhmac@gmail.com"
         git config --local user.name "khodaparastan"
         git add --all
+        git pull
         if [-z "$(git status --porcelain)"]; then
            echo "::set-output name=push::false"
         else
